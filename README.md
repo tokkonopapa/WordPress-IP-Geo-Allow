@@ -60,3 +60,5 @@ Download: https://github.com/ddur/WordPress-IP-Geo-Allow/releases/download/v0.9.
   
   You can feel free to install and activate to make a trial 
   of this plugin's functionality.
+
+![ip-geo-allow-admin-screen](https://cloud.githubusercontent.com/assets/3501612/26226617/61b84152-3c2d-11e7-8a4b-3d7a919ee538.png)
