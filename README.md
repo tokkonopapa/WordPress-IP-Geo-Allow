@@ -5,16 +5,13 @@ Download: https://github.com/ddur/WordPress-IP-Geo-Allow/releases/download/v0.9.
 
 * **Host Name (DNS) Whitelist:**
   
-  When your Host accessing WordPress admin panel has DNS or Dynamic-DNS name.
+  When your Host accessing WordPress admin panel has DNS or [Dynamic-DNS](https://en.wikipedia.org/wiki/Dynamic_DNS) name.
   
   Automatic whitelist IP by resolving host name (Dynamic&Static DNS)
 
   Use case 1): 
   
-  If your whitelist host has changing IP (Dynamic DNS) 
-  or you do not want to search/remember IP (classic DNS)
-  then configure IP-Geo-Allow by entering your Host Name
-  and, if appropriate, change IP-Geo-Block country code to ZZ.
+  If your host has dynamic IP and [Dynamic-DNS](https://en.wikipedia.org/wiki/Dynamic_DNS), or your host has (classic) DNS name, then configure IP-Geo-Allow by entering your Host Name and, if appropriate, change IP-Geo-Block country code to ZZ.
   
   Use case 2): 
   
