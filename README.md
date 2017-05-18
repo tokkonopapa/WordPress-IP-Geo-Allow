@@ -5,7 +5,7 @@ Download: https://github.com/ddur/WordPress-IP-Geo-Allow/releases/download/v0.9.
 
 * **Host Name (DNS) Whitelist:**
   
-  When your Host has DNS or Dynamic-DNS name.
+  When your Host accessing WordPress admin panel has DNS or Dynamic-DNS name.
   
   Automatic whitelist IP by resolving host name (Dynamic&Static DNS)
 
@@ -30,9 +30,9 @@ Download: https://github.com/ddur/WordPress-IP-Geo-Allow/releases/download/v0.9.
 
 * **Reverse-DNS Lookup allow-filter for Host or Network Name :**
   
-  When your Host has Reverse Host Name (set by your internet provider)
+  When your Host accessing WordPress admin panel has Reverse Host Name (set by your internet provider)
   
-  Allows Network or Host by matching reverse lookup of Host Name
+  Allows Network or Host by matching filter to Reverse-DNS Host Name
 
   Use case: 
   
