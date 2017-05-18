@@ -1,7 +1,9 @@
 # WordPress-IP-Geo-Allow
 WordPress Plugin Exension for [WordPress-IP-Geo-Block](https://github.com/tokkonopapa/WordPress-IP-Geo-Block) Plugin
 
-Download: https://github.com/ddur/WordPress-IP-Geo-Allow/releases/download/v0.9.3/ip-geo-allow.0.9.3.zip
+Plugin download: https://github.com/ddur/WordPress-IP-Geo-Allow/releases/download/v0.9.3/ip-geo-allow.0.9.3.zip
+
+Get free [Dynamic-DNS service](https://doc.pfsense.org/index.php/Dynamic_DNS) for your internet connection, or add Dynamic-DNS record to your domain if your DNS Name Service provider has support for it ([ie: NameCheap](https://www.namecheap.com/))
 
 ![ip-geo-allow-admin-screen](https://cloud.githubusercontent.com/assets/3501612/26226617/61b84152-3c2d-11e7-8a4b-3d7a919ee538.png)
 
