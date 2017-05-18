@@ -22,13 +22,13 @@ Download: https://github.com/ddur/WordPress-IP-Geo-Allow/releases/download/v0.9.
   than by "IP Geo Block" allowed country(ies)?
     Then only configure IP-Geo-Allow by entering that Host Name (DNS)
 
-* **Expiration time [min]**
+* **Host Name (DNS) Caching:**
   
   DNS Host-to-IP resolved names are cached by this extension plugin.
   
   Maximum time to keep DNS cache [5-60 minutes].
 
-* **Reverse Host or Network Name allow-filter:**
+* **Reverse-DNS Lookup allow-filter for Host or Network Name :**
   
   When your Host has Reverse Host Name (set by your internet provider)
   
