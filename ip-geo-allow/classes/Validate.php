@@ -43,7 +43,7 @@ if (!class_exists(__NAMESPACE__.'\Validate')) {
 		}
 
 		static function delay ($delay) {
-			if (is_int ($delay) && $delay >= 5 && $delay <= 60) {
+			if (is_int ($delay) && $delay >= Config::DEFAULTS [Config::DELAY_MIN] && $delay <= Config::DEFAULTS [Config::DELAY_MAX]) {
 				return $delay;
 			}
 			return false;
