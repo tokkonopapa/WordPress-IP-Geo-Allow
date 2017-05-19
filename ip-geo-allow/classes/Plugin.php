@@ -145,7 +145,7 @@ if (!class_exists(__NAMESPACE__.'\Plugin')) {
 		private function allowReverseMatch ($validate) {
 			// No need to test if passed
 
-			if ($validate['result'] !== 'passed') {
+			if (isset ($validate['result']) && $validate['result'] !== 'passed') {
 				if (is_array ($this->rnets)) { // Type check
 					// Nets-data exists
 					if (count ($this->rnets) > 0) {
