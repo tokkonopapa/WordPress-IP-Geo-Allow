@@ -15,7 +15,7 @@ Get free [Dynamic-DNS service](https://doc.pfsense.org/index.php/Dynamic_DNS) fo
 
   Use case 1): 
   
-  If your host has dynamic IP and [Dynamic-DNS](https://en.wikipedia.org/wiki/Dynamic_DNS), or your host has (classic) DNS name, then configure IP-Geo-Allow by entering your Host Name and, if appropriate, change IP-Geo-Block country code to ZZ.
+  If your host has dynamic IP and [Dynamic-DNS](https://en.wikipedia.org/wiki/Dynamic_DNS), or your host has (classic) DNS name, then configure IP-Geo-Allow by entering your Host Name and, if appropriate, change IP-Geo-Block country code to XX.
   
   Use case 2): 
   
@@ -39,7 +39,7 @@ Get free [Dynamic-DNS service](https://doc.pfsense.org/index.php/Dynamic_DNS) fo
   
   In a large country IP-GEO country-location may not be restricitive enough,
   Then use this filter to restrict allowed hosts to your internet provider.
-  Change IP-Geo-Block Allowed Country Code to ZZ or any other by your choice.
+  Change IP-Geo-Block Allowed Country Code to XX or any other by your choice.
 
   ie: 'my.work.pc.example.com' 
     Matches host with '*my.work.pc.example.com' reverse name
