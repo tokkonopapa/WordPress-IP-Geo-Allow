@@ -15,7 +15,7 @@ Get free [Dynamic-DNS service](https://doc.pfsense.org/index.php/Dynamic_DNS) fo
 
   Use case 1): 
   
-  If your host has dynamic IP and [Dynamic-DNS](https://en.wikipedia.org/wiki/Dynamic_DNS), or your host has (classic) DNS name, then configure IP-Geo-Allow by entering your Host Name and, if appropriate, change IP-Geo-Block country code to XX.
+  If your host has dynamic IP and [Dynamic-DNS](https://en.wikipedia.org/wiki/Dynamic_DNS), or your host has (classic) DNS name, then configure IP-Geo-Allow by entering your Host Name and, if appropriate, change IP-Geo-Block country code to XX which means a country not existing.
   
   Use case 2): 
   
