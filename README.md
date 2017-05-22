@@ -1,4 +1,6 @@
 # WordPress-IP-Geo-Allow
+Private access to WordPress admin panel, only from your internet connection!
+
 WordPress Plugin Exension for [WordPress-IP-Geo-Block](https://github.com/tokkonopapa/WordPress-IP-Geo-Block) Plugin
 
 Plugin download: https://github.com/ddur/WordPress-IP-Geo-Allow/releases/download/v0.9.3/ip-geo-allow.0.9.3.zip
@@ -15,7 +17,7 @@ Get free [Dynamic-DNS service](https://doc.pfsense.org/index.php/Dynamic_DNS) fo
 
   Use case 1): 
   
-  If your host has dynamic IP and [Dynamic-DNS](https://en.wikipedia.org/wiki/Dynamic_DNS), or your host has (classic) DNS name, then configure IP-Geo-Allow by entering your Host Name and, if appropriate, change IP-Geo-Block country code to XX which means a country not existing.
+  If your host has dynamic IP and [Dynamic-DNS](https://en.wikipedia.org/wiki/Dynamic_DNS), or your host has (classic) DNS name, then configure IP-Geo-Allow by entering your Host Name and, if appropriate, change IP-Geo-Block country code to ZZ or XX. ZZ is [private range](https://en.wikipedia.org/wiki/Private_network), XX means a country not existing.
   
   Use case 2): 
   
@@ -39,7 +41,7 @@ Get free [Dynamic-DNS service](https://doc.pfsense.org/index.php/Dynamic_DNS) fo
   
   In a large country IP-GEO country-location may not be restricitive enough,
   Then use this filter to restrict allowed hosts to your internet provider.
-  Change IP-Geo-Block Allowed Country Code to XX or any other by your choice.
+  Change IP-Geo-Block Allowed Country Code to ZZ/XX or any other by your choice.
 
   ie: 'my.work.pc.example.com' 
     Matches host with '*my.work.pc.example.com' reverse name
