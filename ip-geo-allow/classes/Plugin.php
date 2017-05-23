@@ -140,12 +140,12 @@ if (!class_exists(__NAMESPACE__.'\Plugin')) {
 		}
 
 		/* Check if Reverse DNS matches network/domain
-		IP_Geo_Block filter for: 'ip-geo-block-login'; 'ip-geo-block-admin'
+		IP_Geo_Block filter for: 'ip-geo-block-xmlrpc'; 'ip-geo-block-login'; 'ip-geo-block-admin'
 		*/
 		private function allowReverseMatch ($validate) {
-			// No need to test if passed
-
-			if (isset ($validate['result']) && $validate['result'] !== 'passed') {
+			// No need to test if $validate['result'] === 'passed'
+			if ((!array_key_exists('result', $validate) || $validate['result'] !== 'passed')
+				&& array_key_exists('ip', $validate)) {
 				if (is_array ($this->rnets)) { // Type check
 					// Nets-data exists
 					if (count ($this->rnets) > 0) {
