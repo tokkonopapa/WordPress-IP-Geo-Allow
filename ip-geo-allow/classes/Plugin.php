@@ -144,8 +144,8 @@ if (!class_exists(__NAMESPACE__.'\Plugin')) {
 		*/
 		private function allowReverseMatch ($validate) {
 			// No need to test if $validate['result'] === 'passed'
-			if ((!array_key_exists('result', $validate) || $validate['result'] !== 'passed')
-				&& array_key_exists('ip', $validate)) {
+			if (is_array ($validate) && array_key_exists('ip', $validate) && filter_var ($validate['ip'], FILTER_VALIDATE_IP) !== false &&
+				(!array_key_exists('result', $validate) || $validate['result'] !== 'passed')) {
 				if (is_array ($this->rnets)) { // Type check
 					// Nets-data exists
 					if (count ($this->rnets) > 0) {
