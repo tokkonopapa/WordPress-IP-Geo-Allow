@@ -207,16 +207,13 @@ if (!class_exists(__NAMESPACE__.'\Plugin')) {
 		public function onPluginActivate () {
 
 			$fail = false;
-			if (is_multisite()) {
-				$fail[] = 'Multisite is not supported by this plugin.';
-			}
 
 			$required_php_version = '5.6';
 			if (!version_compare (phpversion(), $required_php_version, '>=')) {
 				$fail[] = 'Please upgrade PHP to version '.$required_php_version.' or later.';
 			}
 
-			$required_wp_version = '4.7';
+			$required_wp_version = '4.7.5';
 			if (!version_compare (get_bloginfo('version'), $required_wp_version, '>=')) {
 				$fail[] = 'Please upgrade Wordpress to version '.$required_wp_version.' or later.';
 			}
@@ -243,8 +240,16 @@ if (!class_exists(__NAMESPACE__.'\Plugin')) {
 		}
 
 		public static function onPluginUninstall () {
-			delete_option (Plugin::getOptionId ()); // Remove options
+			if (is_multisite()) {
+				$sites = get_sites();
+				foreach ($sites as $site) {
+					switch_to_blog( $site->blog_id );
+					delete_option (Plugin::getOptionId ()); // Remove options
+				}
+				restore_current_blog();
+			} else {
+				delete_option (Plugin::getOptionId ()); // Remove options
+			}
 		}
-
 	}
 }

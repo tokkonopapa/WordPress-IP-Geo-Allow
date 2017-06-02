@@ -3,7 +3,7 @@ Private access to WordPress admin panel, only from your internet connection!
 
 WordPress Plugin Exension for [WordPress-IP-Geo-Block](https://github.com/tokkonopapa/WordPress-IP-Geo-Block) Plugin
 
-Plugin download: https://github.com/ddur/WordPress-IP-Geo-Allow/releases/download/v0.9.3/ip-geo-allow.0.9.3.zip
+Plugin download: https://github.com/ddur/WordPress-IP-Geo-Allow/releases/download/v0.9.4/ip-geo-allow.0.9.4.zip
 
 Get free [Dynamic-DNS service](https://doc.pfsense.org/index.php/Dynamic_DNS) for your internet connection, or add Dynamic-DNS record to your domain if your DNS Name Service provider has support for it ([ie: NameCheap](https://www.namecheap.com/))
 

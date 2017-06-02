@@ -1,6 +1,5 @@
 === IP Geo Allow ===
 Author: ddur
-Donate link: PayPal.Me/ddur
 Tags: dynamic DNS, reverse DNS, security, vulnerability, login, wp-admin, admin, ajax, xmlrpc, comment, spam, IP address
 Requires at least: WP 4.7, PHP 5.6
 Tested up to: 4.7.5, PHP 7
@@ -81,6 +80,9 @@ Extension for IP-Geo-Block Plugin
 
 == Changelog ==
 
+= 0.9.4 =
+* **Multisite Support**
+
 = 0.9.3 =
-* **Initial Release:**
+* **Initial Release**
 

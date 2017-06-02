@@ -52,9 +52,10 @@ if (!class_exists(__NAMESPACE__.'\Settings')) {
 
 		// settings ['sections'] ['fields']
 		public function renderField_delay ($args) {
-			$min = (array_key_exists ('min', $args) && is_int ($args ['min']))? $args ['min'] : Config::DELAY_MIN;
-			$max = (array_key_exists ('max', $args) && is_int ($args ['max']))? $args ['max'] : Config::DELAY_MAX;
-			$this->renderRangeSlider ($args, Plugin::getOption ($args['name']), $min, $max);
+			$args ['min'] = (array_key_exists (Config::DELAY_MIN, $args) && is_int ($args [Config::DELAY_MIN]))? $args [Config::DELAY_MIN] : Config::DEFAULTS [Config::DELAY_MIN];
+			$args ['max'] = (array_key_exists (Config::DELAY_MAX, $args) && is_int ($args [Config::DELAY_MAX]))? $args [Config::DELAY_MAX] : Config::DEFAULTS [Config::DELAY_MAX];
+			$args ['units'] = (array_key_exists (Config::DELAY_UNITS, $args) && is_string ($args [Config::DELAY_UNITS]))? $args [Config::DELAY_UNITS] : Config::DEFAULTS [Config::DELAY_UNITS];
+			$this->renderRangeSlider ($args, Plugin::getOption ($args['name']));
 		}
 
 		// settings ['sections']

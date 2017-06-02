@@ -155,14 +155,17 @@ if (!class_exists(__NAMESPACE__.'\AbstractSettings')) {
 			echo "<textarea id=\"$id\" name=\"$name\" style=\"min-height:60px;max-height:300px\" class=\"$class\" placeholder=\"$place\">$value</textarea>";
 		}
 
-		protected function renderRangeSlider ($args, $value, $min = null, $max = null) {
+		protected function renderRangeSlider ($args, $value) {
 			$fn = $args['name'];
 			$id = esc_attr ($this->optionid.'_'.$fn);
 			$name = esc_attr ($this->optionid.'['.$fn.']');
-			$class = esc_attr (array_key_exists ('class', $args)? $args ['class'] : $this->page);
 			$value = esc_html ($value);
+			$class = esc_attr (array_key_exists ('class', $args)? $args ['class'] : $this->page);
+			$min = esc_attr (array_key_exists ('min', $args)? $args['min'] : '');
+			$max = esc_attr (array_key_exists ('max', $args)? $args['max'] : '');
+			$units = esc_html (array_key_exists ('units', $args)? $args ['units'] : '');
 			echo "<input type=\"range\" id=\"$id\" name=\"$name\" value=\"$value\" min=\"$min\" max=\"$max\" oninput=\"document.getElementById('$id-out').value=this.value;\">";
-			echo "<output id=\"$id-out\" for=\"$id\">$value</output> minutes";
+			echo "<output id=\"$id-out\" for=\"$id\">$value</output> $units";
 		}
 
 	}

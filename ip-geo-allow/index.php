@@ -12,7 +12,7 @@
  * Plugin URI:  https://github.com/ddur/WordPress-IP-Geo-Allow
  * Description: Extends "IP Geo Block" plugin with [Dyn]DNS named hosts to IP Whitelist and Reverse-DNS name allow-filter.
  * Text Domain: ip-geo-allow
- * Version:     0.9.3
+ * Version:     0.9.4
  * Author:      Dragan Đurić <dragan.djuritj@gmail.com>
  * Author URI:  https://github.com/ddur
  * License URI: http://www.gnu.org/licenses/agpl-3.0.txt

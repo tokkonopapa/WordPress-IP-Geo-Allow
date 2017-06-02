@@ -9,8 +9,9 @@ if (!class_exists(__NAMESPACE__.'\Config')) {
 		const HOSTS_ENABLED = 'hosts_enabled';
 		const HOSTS = 'hosts';
 		const DELAY = 'delay';
-		const DELAY_MIN = 'delay_min';
-		const DELAY_MAX = 'delay_max';
+		const DELAY_MIN = 'min';
+		const DELAY_MAX = 'max';
+		const DELAY_UNITS = 'units';
 
 		const RNETS_ENABLED = 'rnets_enabled';
 		const RNETS = 'rnets';
@@ -22,6 +23,7 @@ if (!class_exists(__NAMESPACE__.'\Config')) {
 				self::DELAY => 45,
 				self::DELAY_MIN => 5,
 				self::DELAY_MAX => 60,
+				self::DELAY_UNITS => 'minutes',
 				self::RNETS_ENABLED => false,
 				self::RNETS => array ()
 			);
@@ -30,9 +32,7 @@ if (!class_exists(__NAMESPACE__.'\Config')) {
 			array (
 				'menu' => array (
 					'title' => 'IP Geo Allow',
-					'parent-slug' => 'options-general.php'//, // tools.php
-					#'icon' => 'dashicons-hammer', // 'none'
-					//'position' => 32
+					'parent-slug' => 'options-general.php'
 				),
 				'page' => array ('title' => 'IP Geo Allow'),
 				'capability' => 'manage_options',
@@ -58,8 +58,9 @@ if (!class_exists(__NAMESPACE__.'\Config')) {
 								'title' => 'Cache DNS Lookup for',
 								'render' => 'renderField_delay', # method name
 								'default' => Config::DEFAULTS [Config::DELAY],
-								'min' => Config::DEFAULTS [Config::DELAY_MIN],
-								'max' => Config::DEFAULTS [Config::DELAY_MAX]
+								Config::DELAY_MIN => Config::DEFAULTS [Config::DELAY_MIN],
+								Config::DELAY_MAX => Config::DEFAULTS [Config::DELAY_MAX],
+								Config::DELAY_UNITS => Config::DEFAULTS [Config::DELAY_UNITS]
 							)
 						)
 					),
