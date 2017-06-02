@@ -235,8 +235,17 @@ if (!class_exists(__NAMESPACE__.'\Plugin')) {
 			}
 		}
 
-		public function onPluginDeactivate () {
-			wp_clear_scheduled_hook (Plugin::getCronId ()); // Remove cron if waiting
+		public function onPluginDeactivate ($networkwide) {
+			if (is_multisite() && $networkwide) {
+				$sites = get_sites();
+				foreach ($sites as $site) {
+					switch_to_blog( $site->blog_id );
+					wp_clear_scheduled_hook (Plugin::getCronId ()); // Remove cron if waiting
+				}
+				restore_current_blog();
+			} else {
+				wp_clear_scheduled_hook (Plugin::getCronId ()); // Remove cron if waiting
+			}
 		}
 
 		public static function onPluginUninstall () {
@@ -245,6 +254,7 @@ if (!class_exists(__NAMESPACE__.'\Plugin')) {
 				foreach ($sites as $site) {
 					switch_to_blog( $site->blog_id );
 					delete_option (Plugin::getOptionId ()); // Remove options
+					wp_clear_scheduled_hook (Plugin::getCronId ()); // Remove cron if waiting
 				}
 				restore_current_blog();
 			} else {
